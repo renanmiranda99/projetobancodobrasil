@@ -7,7 +7,7 @@ const Header = () => {
         <button>Início</button>
         <button>Sobre</button>
         <button>Serviços</button>
-        <button>Contato</button>
+        <button>Cadastro</button>
       </nav>
     </header>
   );
