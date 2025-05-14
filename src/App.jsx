@@ -1,18 +1,24 @@
 import './App.css';
 import Header from './components/header/Header';
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
 import Cadastro from './pages/cadastro/Cadastro';
+import Imoveis from './pages/imoveis/Imoveis';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app-container">
-      <Header/>
-      <main className="main-content">
-        <h1>Bem-vindo</h1>
-        <Cadastro/>
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="app-container">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/Imoveis" element={<Imoveis />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
